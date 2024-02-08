@@ -5,8 +5,8 @@ import aiohttp
 
 from ComradeAI.Mycelium import Mycelium, Message, Dialog, UnifiedPrompt, RoutingStrategy
 
-from app.config import API_TOKEN, ComradeAIToken, model_mapping, requestAgentConfigs, token_limits
-from app.utils import extract_and_clean_links, url_text, count_cut_tokens
+from config import API_TOKEN, ComradeAIToken, model_mapping, requestAgentConfigs, token_limits
+from utils import extract_and_clean_links, url_text, count_cut_tokens
 
 bot = AsyncTeleBot(API_TOKEN)
 
