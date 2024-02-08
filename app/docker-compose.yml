@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  bot:
+    build:
+      context: .
+      args:
+        REPO_URL: <YOUR_URL>
+    environment:
+      - TELEGRAM_TOKEN=<YOUR_TOKEN>
+      - COMRADEAI_TOKEN=<YOUR_TOKEN>
+    restart: always
