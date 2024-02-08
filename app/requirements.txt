@@ -1,0 +1,5 @@
+ComradeAI
+telebot
+tiktoken
+aiohttp
+bs4
