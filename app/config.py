@@ -1,12 +1,7 @@
-import configparser
+import os
 
-config = configparser.ConfigParser()
-config.read("settings.ini")
-
-API_TOKEN = config["Telegram"]["token"]
-
-
-ComradeAIToken = config["ComradeAI"]["token"]
+API_TOKEN = os.getenv('TELEGRAM_TOKEN')
+ComradeAIToken = os.getenv('COMRADEAI_TOKEN')
 
 requestAgentConfigs = {
     "GPT-3.5": {"model": "gpt-3.5-turbo-1106", "max_tokens": 4096, "temperature": 0.8},
