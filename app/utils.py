@@ -24,7 +24,7 @@ async def extract_and_clean_links(text):
 async def is_webpage_async(url):
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.head(url) as response:
+            async with session.get(url) as response:
                 content_type = response.headers.get('content-type', '').lower()
                 return content_type.startswith('text/html')
     except Exception as e:
